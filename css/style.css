@@ -1,0 +1,452 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*--------------Menu--------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    background-color: #333;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+}
+
+.logo a{
+    font-size: 38px;
+    font-weight: 600;
+    color:#fff;
+}
+
+ul{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+}
+
+.menu li a.active, .menu li a:hover{
+    color: aqua;
+    transition: 0.5s;
+}
+
+/*----Menu mobile----------*/
+@media(max-width:991px){
+
+    header{
+        padding: 20px 15px;
+    }
+
+    .menu-toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .menu-toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+
+    .menu-toggle.active:before{
+        content: '\f00d';
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav.active{
+        display: block;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    nav.active ul{
+		display: block;
+	}
+
+	nav.active ul li a{
+		margin: 0;
+	}
+}
+/*--------------Fim Menu--------------------*/
+
+/*--------------Banner--------------------*/
+.banner{
+	position: relative;
+	width: 100%;
+	background: #2c3e50;
+}
+
+.meu-banner{
+	height: 690px;
+	overflow: hidden;
+	display: none;
+}
+
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 45%;
+	left: 7%;
+	z-index: 1;
+}
+
+.txt h1{
+	color: aqua;
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+
+.txt p{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.banner img{
+	transform: scale(1.3, 1.3);
+	-webkit-animation-name: zoomin;
+	-webkit-animation-duration: 40s;
+	animation-name: zoomin;
+	animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin{
+	from{transform: scale(1,1);}
+	to{transform: scale(1.3, 1.3);}
+}
+
+@keyframes zoomin{
+	from{transform: scale(1,1);}
+	to{transform: scale(1.3, 1.3);}
+}
+/*--------------Fim Menu--------------------*/
+
+.titulo h1{
+    margin-top: 70px;
+    font-size: 28px;
+    color: #222;
+}
+
+.titulo hr{
+    border: 2px solid aqua;
+    width: 45px;
+    margin-bottom: 30px;
+}
+
+.titulo p{
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #444;
+}
+
+/*------Sobre-------------*/
+.sobre .quem-somos{
+    display: flex;
+    flex: 1 1 250px;
+    padding: 0 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sobre .quem-somos .info{
+    width: 45%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.sobre .quem-somos .info h2{
+    color: #444;
+}
+
+.sobre .quem-somos .info p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.sobre .quem-somos .info ul{
+    display: block;
+}
+
+.sobre .quem-somos .info i{
+    color: aqua;
+}
+
+.sobre .quem-somos .figura{
+    width: 52%;
+}
+
+.sobre .quem-somos .figura img{
+    width: 100%;
+    height: 95%;
+}
+
+@media(max-width:991px){
+    .sobre .quem-somos .figura{
+        width: 100%;
+    }
+
+    .sobre .quem-somos .info{
+        width: 100%;
+    }
+}
+/*----Fim Sobre-----------*/
+
+/*----Serviços-----------*/
+.servico .figura{
+    background-color: #222;
+    padding: 60px 20px;
+}
+
+.servico .figura .info p{
+    font-weight: bold;
+	font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.servico .figura .card{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.servico .figura .card .card-info{
+    flex: 1 1 250px;
+    margin: 10px;
+    color: #fff;
+    padding: 10px 18px;
+    text-align: center;
+    border: 2px solid aqua;
+}
+
+.servico .figura .card .card-info:hover{
+    border: none;
+    background-color: #fff;
+    color: #222;
+    transition: 1s;
+}
+
+.servico .figura .card .card-info i{
+    font-size: 24px;
+}
+
+.servico .figura .card .card-info h3{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.servico .btn-solicitar{
+    margin-top: 30px;
+}
+.servico .btn-solicitar a{
+    padding: 10px 20px;
+    background-color: aqua;
+    color: #fff;   
+}
+
+.servico .btn-solicitar a:hover{
+    background-color: #fff;
+    color: #222;
+    transition: 1s;   
+}
+/*----Fim Serviços-----------*/
+
+/*--------Galeria-----------*/
+.galeria .fundo{
+    background-color: #f7f7f7;
+    padding: 20px 20px;
+}
+.galeria .elementos{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.galeria .elementos .figura{
+    flex: 1 1 250px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.galeria .elementos .figura img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.galeria .elementos .figura img:hover{
+    transform: scale(1.3);
+}
+/*----Fim Galeria-----------*/
+
+/*------Contactos-----------*/
+.contactos .linha{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contactos .linha .mapa iframe{
+    width: 100%;
+}
+
+.contactos .linha .info{
+    margin: 0 20px;
+}
+
+.contactos .linha .mapa{
+    margin: 0 20px;
+}
+
+.contactos .linha .info .element{
+    display: flex;
+}
+
+.contactos .linha .info .espaco{
+    margin-bottom: 30px;
+}
+
+.contactos .linha .info i{
+    padding: 10px 0px;
+    color: aqua;
+    font-size: 25px;
+    border-radius: 50%;
+    margin: 0 7px;
+}
+
+.contactos .linha .card{
+    padding: 20px 10px;
+    flex: 1 1 250px;
+    margin-bottom: 50px;
+    box-shadow: 0px 5px 30px rgb(44 73 100 / 20%);;
+}
+/*----Fim Contactos-----------*/
+
+/*-------Rodapé---------------*/
+footer{
+    margin-top: 70px;
+    background-color: #0c0c0c;
+    padding: 30px 70px;
+}
+
+footer .barra-inferior{
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 0 10px;
+    align-items: center;
+    border-top: 1px solid aqua;
+    padding-top: 30px;
+}
+
+footer .barra-inferior .copyright{
+    font-size: 16px;
+}
+
+footer .barra-inferior .copyright span{
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+footer .barra-inferior .desenvolvedor{
+    font-size: 16px;
+}
+
+footer .barra-inferior .desenvolvedor a{
+    font-size: 16px;
+    color: aqua;
+}
+
+footer .barra-inferior .desenvolvedor a:hover{
+    color: grey;
+    transition: 0.5s;
+}
+
+footer .barra-superior{
+    color: #f7f7f7;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+footer .barra-superior h3{
+    font-size: 26px;
+}
+
+footer .barra-superior p{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+footer .barra-superior .social a{
+    padding: 8px 13px;
+    background-color: #f7f7f7;
+    color: #444;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    transition: 0.5s;
+}
+
+footer .barra-superior .social a:hover{
+    background-color: #444;
+    color: aqua;
+}
+
+.btn-top{
+    z-index: 999;
+    display: inline-block;
+    position: fixed;
+    background-color: #444;
+    color: aqua;
+    bottom: 20px;
+    right: 20px;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.btn-top:hover{
+    background-color: #666;
+}
+/*-------Fim Rodapé-----------*/
