@@ -170,14 +170,12 @@ ul{
 /*------Sobre-------------*/
 .sobre .quem-somos{
     display: flex;
-    flex: 1 1 250px;
     padding: 0 80px;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .sobre .quem-somos .info{
-    width: 45%;
+    flex: 1 1 400px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -203,18 +201,14 @@ ul{
     width: 52%;
 }
 
-.sobre .quem-somos .figura img{
+.sobre .quem-somos .info img{
     width: 100%;
     height: 95%;
 }
 
 @media(max-width:991px){
-    .sobre .quem-somos .figura{
-        width: 100%;
-    }
-
-    .sobre .quem-somos .info{
-        width: 100%;
+    .sobre .quem-somos{
+        padding: 0 15px;
     }
 }
 /*----Fim Sobre-----------*/
